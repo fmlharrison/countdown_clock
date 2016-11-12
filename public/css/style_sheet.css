@@ -1,0 +1,127 @@
+body {
+  background-image: url(http://www.marikkas.com/wp-content/uploads/2015/02/beer-background.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font: 30px "Arial Black", Gadget, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.date_input {
+  margin: 0 auto;
+  width: 500px;
+  height: 150px;
+  align-items: center;
+}
+
+.date_choice {
+  text-align: center;
+}
+
+#date {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#time, #countdown {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type=date] {
+  background: #ccc;
+  background: linear-gradient(90deg, #ddd, #ccc);
+  border: 3px solid #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  color: #222;
+  font: 16px "Arial Black", Gadget, sans-serif;
+  left: 50%;
+  line-height: 20px;
+  text-align: left;
+  outline: 0;
+  padding: 5px 10px;
+  top: 50%;
+  width: 200px;
+}
+
+input[type=time] {
+  background: #ccc;
+  background: linear-gradient(90deg, #ddd, #ccc);
+  border: 3px solid #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  color: #222;
+  font: 16px "Arial Black", Gadget, sans-serif;
+  left: 50%;
+  line-height: 20px;
+  text-align: left;
+  outline: 0;
+  padding: 5px 10px;
+  top: 50%;
+  width: 100px;
+}
+
+input[type=submit] {
+  background: #ccc;
+  background: linear-gradient(90deg, #ddd, #ccc);
+  border: 3px solid #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  color: #222;
+  font: 14px "Arial Black", Gadget, sans-serif;
+  left: 50%;
+  line-height: 20px;
+  outline: 0;
+  padding: 5px 5px;
+  top: 50%;
+  width: 130px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  color: #999;
+  height: 8px;
+  position: relative;
+  width: 8px;
+  z-index: 0;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator:before {
+  background: #eee;
+  background: linear-gradient(90deg, #eee, #fff);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 24px;
+  content: '';
+  display: block;
+  height: 22px;
+  left: -2px;
+  position: absolute;
+  top: -5px;
+  width: 22px;
+  z-index: -1;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator:hover {
+  background: none;
+}
+
+input[type=date]:focus {
+  border-color: #3399ff;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+.your-clock-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
