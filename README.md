@@ -10,6 +10,10 @@ The animation for the clock face was taken from CodePen and was developed by Sim
 Patrat. You can see some more of his work at simonpatrat.com.
 
 ###How to use
+Go to https://beer-time-countdown.herokuapp.com/  
+
+or  
+
 ```
 $ git clone https://github.com/fmlharrison/countdown_clock.git  
 $ cd countdown_clock  
