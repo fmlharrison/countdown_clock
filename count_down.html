@@ -13,21 +13,42 @@
 
     <h1>Time till BEERS!!!!</h1>
 
+    <div class="date_input">
+      <form class= "date_choice">
+        <input id="date" type="date" name="date" >
+        <input id="time" type="time" name="time" >
+        <input id="countdown" type="submit" name="countdown" value="Countdown">
+      </form>
+    </div>
+
     <div class="your-clock-cont">
       <div class="your-clock"></div>
     </div>
 
     <script type="text/javascript">
-      var time = new Date();
-      var beerTime = new Date(Date.UTC(2016, 10, 11, 18, 15, 0));
-      var difference = (beerTime.getTime() - time.getTime()) / 1000;
-      console.log(time);
-      console.log(beerTime);
-      console.log(difference);
-      var clock = $('.your-clock').FlipClock(difference, {
-        clockFace: 'DailyCounter',
-        countdown: true
+
+
+      document.getElementById('countdown').addEventListener('click', function (e) {
+        e.preventDefault();
+        var date_value = document.getElementById('date').value;
+        var time_value = document.getElementById('time').value;
+        var countdowTime = new Date(setDateTimeData(date_value, time_value));
+        countdownClock(countdowTime);
       });
+
+      function setDateTimeData(date_value, time_value) {
+        return date_value + "T" + time_value
+      };
+
+      function countdownClock(inputTime) {
+        var time = new Date();
+        var difference = (inputTime.getTime() - time.getTime()) / 1000;
+        var clock = $('.your-clock').FlipClock(difference, {
+          clockFace: 'DailyCounter',
+          countdown: true
+        });
+      };
+
     </script>
   </body>
 </html>
